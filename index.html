@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Countries API</title>
+</head>
+<body>
+<div class="countries">
+    <h1>Countries API</h1>
+</div>
+<div class="formlist">
+    <input type="text" value="Type A Country Name...">
+    <br>
+    <br>
+    <button id="btnShowData">Show Data</button>
+    <br>
+    <br>
+    <div>
+        <input type="radio" id="countryName" name="country" value="huey"
+               checked>
+        <label for="huey">Search By Country Name</label>
+      </div>
+      <br>
+      <div>
+        <input type="radio" id="countryCapital" name="capital" value="dewey">
+        <label for="dewey">Search By Country Capital</label>
+      </div>
+      
+    <ul id="countryList">
+    </ul>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
