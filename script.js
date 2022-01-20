@@ -24,10 +24,15 @@ $(() => {
 })
 
 
-
+let endPoint = "";
 function getOneCountry(countryName) {
+    if ($("#countryName").is(":checked")) {
+    endPoint = 'https://restcountries.com/v3.1/name/' 
+    } else if ($("#countryCapital").is(":checked")) {
+    endPoint = 'https://restcountries.com/v3.1/capital/'
+    }
     $.ajax({
-        url: `https://restcountries.com/v3.1/name/${countryName}`,
+        url: `${endPoint}${countryName}`,
         success: function(data, statuts, response) {
             console.log("data", data);
             let dataOneCountry = `<li> ${data[0].name.common} - ${data[0].capital} - ${data[0].region} </li>`
@@ -42,3 +47,6 @@ $(() => {
     })
 })
 
+function capitalCountrySearch () {
+    
+}
